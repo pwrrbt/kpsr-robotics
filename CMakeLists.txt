@@ -61,6 +61,8 @@ message(STATUS "kpsr-build path: " ${KPSR_BUILD_PATH})
 # Paths
 SET(CMAKE_MODULE_PATH ${KPSR_BUILD_PATH}/cmake)
 SET(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} ${THIRDPARTIES_PATH})
+SET(LIBRARY_OUTPUT_PATH          ${PROJECT_BINARY_DIR}/bin                   CACHE PATH "Library output" FORCE)
+SET(EXECUTABLE_OUTPUT_PATH       ${PROJECT_BINARY_DIR}/bin                   CACHE PATH "Executable output" FORCE)
 
 # Must use GNUInstallDirs to install libraries into correct
 # locations on all platforms.
